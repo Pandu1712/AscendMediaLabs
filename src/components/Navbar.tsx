@@ -31,27 +31,25 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between px-4 md:px-8">
         <a href="#home" className="font-display text-2xl font-bold tracking-tight">
-          <span className="text-gradient-gold">Ascend</span>
+          <span className="text-gradient-brand">Ascend</span>
         </a>
 
-        {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="font-body text-sm font-medium text-foreground/70 hover:text-gold transition-colors duration-300 relative group"
+              className="font-body text-sm font-medium text-foreground/70 hover:text-secondary transition-colors duration-300 relative group"
             >
               {link.label}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 gradient-gold rounded-full transition-all duration-300 group-hover:w-full" />
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 gradient-blue rounded-full transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
-          <a href="#contact" className="btn-premium text-sm !py-2.5 !px-6">
+          <a href="#contact" className="btn-primary text-sm !py-2.5 !px-6">
             Get Started
           </a>
         </div>
 
-        {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="md:hidden text-foreground p-2"
@@ -60,7 +58,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -75,12 +72,12 @@ const Navbar = () => {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="font-body text-base font-medium text-foreground/80 hover:text-gold transition-colors"
+                  className="font-body text-base font-medium text-foreground/80 hover:text-secondary transition-colors"
                 >
                   {link.label}
                 </a>
               ))}
-              <a href="#contact" onClick={() => setMobileOpen(false)} className="btn-premium text-center text-sm mt-2">
+              <a href="#contact" onClick={() => setMobileOpen(false)} className="btn-primary text-center text-sm mt-2">
                 Get Started
               </a>
             </div>
