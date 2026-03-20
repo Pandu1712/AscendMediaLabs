@@ -25,32 +25,36 @@ const ClientsSection = () => {
         >
           <div className="gold-divider mx-auto mb-6" />
           <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-4">
-            Trusted by <span className="text-gradient-gold">Growing Businesses</span>
+            Trusted by <span className="text-gradient-brand">Growing Businesses</span>
           </h2>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-10"
-        >
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-10">
           {clients.map((client, i) => (
             <motion.div
               key={i}
-              whileHover={{ scale: 1.03 }}
-              className="glass-card-strong rounded-2xl p-6 flex items-center justify-center"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={inView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+              whileHover={{ scale: 1.05, rotateY: 5 }}
+              style={{ perspective: 800 }}
+              className="glass-card-strong rounded-2xl p-6 flex items-center justify-center hover:glow-blue transition-shadow duration-500"
             >
               <span className="font-display font-bold text-foreground/60 text-sm md:text-base tracking-wide">
                 {client}
               </span>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
-        <p className="text-center font-body text-muted-foreground text-sm">
-          Over <strong className="text-gold">60+ successful projects</strong> delivered across industries.
-        </p>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
+          transition={{ delay: 0.5 }}
+          className="text-center font-body text-muted-foreground text-sm"
+        >
+          Over <strong className="text-secondary">60+ successful projects</strong> delivered across industries.
+        </motion.p>
       </div>
     </section>
   );
