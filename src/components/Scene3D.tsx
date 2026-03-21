@@ -50,7 +50,7 @@ const PowerfulCore = () => {
 
 const Scene3D = () => {
   return (
-    <div className="absolute inset-0 z-0 opacity-100">
+    <div className="hidden md:block absolute inset-0 z-0 opacity-100">
       <div className="absolute inset-0">
         <Canvas
           camera={{ position: [0, 0, 10], fov: 45 }}

@@ -25,7 +25,7 @@ const stats = [
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-background">
+    <section id="home" className="relative md:min-h-screen flex flex-col md:flex-row md:items-center overflow-hidden bg-background">
       {/* 3D Scene takes full focus */}
 
       {/* 3D Scene - subtle background */}
@@ -33,7 +33,7 @@ const HeroSection = () => {
         <Scene3D />
       </Suspense>
 
-        <div className="container mx-auto relative z-10 px-6 md:px-12 pt-20 sm:pt-24 md:pt-28 pb-10 md:pb-12">
+        <div className="container mx-auto relative z-10 px-6 md:px-12 pt-24 pb-10 md:py-0">
         <motion.div
           variants={containerVariants}
           initial="hidden"
