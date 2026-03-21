@@ -1,12 +1,4 @@
 User-agent: *
 Allow: /
 
-# Disallow admin or private paths (add more as needed)
-Disallow: /src/
-Disallow: /node_modules/
-
-# Sitemap location
 Sitemap: https://ascendmedialabs.com/sitemap.xml
-
-# Crawl-delay for polite bots
-Crawl-delay: 10
