@@ -33,7 +33,7 @@ const HeroSection = () => {
         <Scene3D />
       </Suspense>
 
-        <div className="container mx-auto relative z-10 px-6 md:px-12 pt-28 pb-12">
+        <div className="container mx-auto relative z-10 px-6 md:px-12 pt-20 sm:pt-24 md:pt-28 pb-10 md:pb-12">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -61,7 +61,7 @@ const HeroSection = () => {
           {/* Subheading */}
           <motion.p
             variants={itemVariants}
-            className="font-body text-lg md:text-xl text-muted-foreground max-w-xl mb-12 leading-relaxed"
+            className="font-body text-base md:text-xl text-muted-foreground max-w-xl mb-8 md:mb-12 leading-relaxed"
           >
             Your brand deserves more than a website — it deserves a digital empire.
             We craft experiences that captivate, convert, and command authority.
@@ -81,12 +81,12 @@ const HeroSection = () => {
           {/* Stats bar */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-wrap gap-x-10 gap-y-4 border-t border-border pt-8"
+            className="grid grid-cols-2 sm:flex sm:flex-wrap gap-x-8 gap-y-5 border-t border-border pt-6"
           >
             {stats.map((stat, i) => (
-              <div key={i} className="min-w-[120px]">
-                <p className="font-display text-3xl md:text-4xl font-bold text-foreground">{stat.value}</p>
-                <p className="font-body text-sm text-muted-foreground mt-1">{stat.label}</p>
+              <div key={i}>
+                <p className="font-display text-2xl md:text-4xl font-bold text-foreground">{stat.value}</p>
+                <p className="font-body text-xs md:text-sm text-muted-foreground mt-1">{stat.label}</p>
               </div>
             ))}
           </motion.div>
