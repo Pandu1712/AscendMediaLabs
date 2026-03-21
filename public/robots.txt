@@ -1,14 +1,12 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
 User-agent: *
 Allow: /
+
+# Disallow admin or private paths (add more as needed)
+Disallow: /src/
+Disallow: /node_modules/
+
+# Sitemap location
+Sitemap: https://ascendmedialabs.com/sitemap.xml
+
+# Crawl-delay for polite bots
+Crawl-delay: 10

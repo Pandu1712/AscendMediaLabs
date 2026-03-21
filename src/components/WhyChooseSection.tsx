@@ -16,8 +16,10 @@ const WhyChooseSection = () => {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="py-24 md:py-36 px-6 md:px-12 relative" style={{ background: "hsl(var(--muted))" }}>
-      <div className="container mx-auto max-w-6xl" ref={ref}>
+    <section className="py-14 md:py-20 px-6 md:px-12 relative overflow-hidden bg-background">
+      {/* Background Glow */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[100px] pointer-events-none" />
+      <div className="container mx-auto max-w-6xl relative z-10" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -39,30 +41,38 @@ const WhyChooseSection = () => {
               key={i}
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="group bg-card rounded-2xl p-8 border border-border hover:border-secondary/20 hover:shadow-lg transition-all duration-500"
+              className="group glass-card relative overflow-hidden rounded-3xl p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-blue hover:border-secondary/30"
             >
+              {/* Internal subtle glow on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative z-10">
               <div className="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center mb-5 group-hover:bg-secondary/20 transition-colors">
                 <reason.icon className="w-5 h-5 text-secondary" />
               </div>
               <h3 className="font-display text-lg font-bold text-foreground mb-2">{reason.title}</h3>
               <p className="font-body text-sm text-muted-foreground leading-relaxed">{reason.desc}</p>
+              </div>
             </motion.div>
           ))}
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.6 }}
-          className="mt-16 rounded-2xl bg-gradient-to-r from-secondary to-royal-light p-8 md:p-12 text-center"
+           initial={{ opacity: 0, y: 20 }}
+           animate={inView ? { opacity: 1, y: 0 } : {}}
+           transition={{ delay: 0.6 }}
+           className="mt-20 glass-card-strong relative overflow-hidden rounded-3xl p-10 md:p-14 text-center group hover:shadow-gold transition-all duration-700 border-white/20"
         >
-          <p className="font-display text-xl md:text-2xl text-white font-bold mb-2">
-            Limited projects per month to ensure quality delivery.
-          </p>
-          <p className="font-body text-white/70 text-sm">
-            From idea to execution — we handle everything.
-          </p>
+          {/* Animated Background Gradient inside CTA */}
+          <div className="absolute inset-0 bg-gradient-brand opacity-[0.15] group-hover:opacity-[0.25] transition-opacity duration-700" />
+          
+          <div className="relative z-10">
+            <p className="font-display text-2xl md:text-4xl text-foreground font-bold mb-4 group-hover:text-gradient-brand transition-colors duration-500">
+              Limited projects per month to ensure premium delivery.
+            </p>
+            <p className="font-body text-muted-foreground text-sm md:text-base md:px-20 leading-relaxed">
+              From idea to execution — we handle everything with precision and care. Partner with Ascend for a digital presence that commands authority.
+            </p>
+          </div>
         </motion.div>
       </div>
     </section>

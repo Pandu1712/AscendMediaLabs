@@ -6,7 +6,7 @@
 
 @layer base {
   :root {
-    /* 2-COLOR SYSTEM: Deep Gold + Royal Blue */
+    /* LIGHT MODE */
     --background: 40 25% 97%;
     --foreground: 28 80% 12%;
 
@@ -16,17 +16,17 @@
     --popover: 0 0% 100%;
     --popover-foreground: 28 80% 12%;
 
-    --primary: 28 90% 15%;
+    --primary: 217 91% 53%;
     --primary-foreground: 40 25% 97%;
 
-    --secondary: 217 91% 53%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 40 90% 45%;
+    --secondary-foreground: 28 80% 12%;
 
     --muted: 40 15% 93%;
     --muted-foreground: 28 30% 45%;
 
-    --accent: 28 90% 15%;
-    --accent-foreground: 40 25% 97%;
+    --accent: 40 15% 93%;
+    --accent-foreground: 28 80% 12%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -35,28 +35,77 @@
     --input: 40 15% 88%;
     --ring: 217 91% 53%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    /* Core 2 colors */
-    --deep-gold: 28 90% 15%;
-    --deep-gold-warm: 30 70% 25%;
+    /* Core Colors */
+    --deep-gold: 40 90% 45%;
+    --deep-gold-warm: 30 70% 35%;
     --royal-blue: 217 91% 53%;
     --royal-blue-light: 199 89% 60%;
 
     --font-display: 'Playfair Display', serif;
     --font-body: 'DM Sans', sans-serif;
 
-    /* Gradients using the 2 colors */
-    --gradient-brand: linear-gradient(135deg, hsl(28 90% 15%), hsl(217 91% 53%));
+    /* Gradients */
+    --gradient-brand: linear-gradient(135deg, hsl(217 91% 53%), hsl(40 90% 45%));
     --gradient-blue: linear-gradient(135deg, hsl(217 91% 53%), hsl(199 89% 60%));
-    --gradient-gold-soft: linear-gradient(135deg, hsl(28 90% 15%), hsl(30 70% 25%));
-    --gradient-hero: linear-gradient(180deg, hsl(40 25% 97%) 0%, hsl(217 91% 53% / 0.06) 100%);
-    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.85), rgba(255,255,255,0.5));
+    --gradient-gold-soft: linear-gradient(135deg, hsl(40 90% 45%), hsl(30 70% 35%));
+    --gradient-hero: linear-gradient(180deg, hsl(40 25% 97%) 0%, hsl(217 91% 53% / 0.05) 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.4));
 
-    --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.06);
+    --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.05);
     --shadow-premium: 0 20px 60px rgba(0, 0, 0, 0.08);
     --shadow-blue: 0 8px 30px hsl(217 91% 53% / 0.2);
-    --shadow-gold: 0 8px 30px hsl(28 90% 15% / 0.15);
+    --shadow-gold: 0 8px 30px hsl(40 90% 45% / 0.15);
+  }
+
+  .dark {
+    /* DARK MODE */
+    --background: 240 10% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 6%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 4%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 40 90% 55%;
+    --primary-foreground: 240 10% 4%;
+
+    --secondary: 217 91% 58%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 5% 15%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 40 90% 55%;
+    --accent-foreground: 240 10% 4%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 5% 15%;
+    --input: 240 5% 15%;
+    --ring: 40 90% 55%;
+
+    --radius: 1rem;
+
+    --deep-gold: 40 90% 60%;
+    --deep-gold-warm: 30 70% 50%;
+    --royal-blue: 217 91% 58%;
+    --royal-blue-light: 199 89% 65%;
+
+    --gradient-brand: linear-gradient(135deg, hsl(40 90% 60%), hsl(217 91% 58%));
+    --gradient-blue: linear-gradient(135deg, hsl(217 91% 58%), hsl(199 89% 65%));
+    --gradient-gold-soft: linear-gradient(135deg, hsl(40 90% 60%), hsl(30 70% 50%));
+    --gradient-hero: linear-gradient(180deg, hsl(240 10% 4%) 0%, hsl(217 91% 53% / 0.1) 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.01));
+
+    --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.4);
+    --shadow-premium: 0 20px 60px rgba(0, 0, 0, 0.6);
+    --shadow-blue: 0 8px 30px hsl(217 91% 53% / 0.3);
+    --shadow-gold: 0 8px 30px hsl(40 90% 60% / 0.25);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -88,14 +137,14 @@
   .glass-card {
     background: var(--gradient-glass);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: var(--shadow-glass);
   }
 
   .glass-card-strong {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(30px);
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: var(--shadow-premium);
   }
 

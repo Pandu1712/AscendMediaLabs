@@ -7,7 +7,9 @@ const ContactSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="contact" className="py-24 md:py-36 px-6 md:px-12 bg-background">
+    <section id="contact" className="py-14 md:py-20 px-6 md:px-12 bg-background relative overflow-hidden">
+      {/* Background Glow */}
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="container mx-auto max-w-6xl" ref={ref}>
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Left */}
@@ -66,7 +68,7 @@ const ContactSection = () => {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <form className="bg-card rounded-2xl border border-border p-8 md:p-10 space-y-5" onSubmit={(e) => e.preventDefault()}>
+            <form className="glass-card rounded-3xl p-8 md:p-10 space-y-5 relative z-10" onSubmit={(e) => e.preventDefault()}>
               <h3 className="font-display text-xl font-bold text-foreground mb-2">Start Your Project</h3>
               <p className="font-body text-sm text-muted-foreground mb-6">Fill in your details and we'll get back within 24 hours.</p>
               
@@ -75,17 +77,17 @@ const ContactSection = () => {
                   key={placeholder}
                   type={placeholder === "Email Address" ? "email" : placeholder === "Phone Number" ? "tel" : "text"}
                   placeholder={placeholder}
-                  className="w-full font-body text-sm bg-muted border-0 rounded-xl px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-secondary/30 transition-all placeholder:text-muted-foreground/50"
+                  className="w-full font-body text-sm bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-foreground focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:bg-white/10 transition-all placeholder:text-muted-foreground/50"
                 />
               ))}
               <textarea
                 placeholder="Tell us about your project..."
                 rows={4}
-                className="w-full font-body text-sm bg-muted border-0 rounded-xl px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-secondary/30 transition-all resize-none placeholder:text-muted-foreground/50"
+                className="w-full font-body text-sm bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-foreground focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:bg-white/10 transition-all resize-none placeholder:text-muted-foreground/50"
               />
               <button
                 type="submit"
-                className="btn-primary w-full flex items-center justify-center gap-2 group"
+                className="btn-primary glow-blue w-full flex items-center justify-center gap-2 group mt-2"
               >
                 Start Your Project
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

@@ -6,7 +6,7 @@ const AboutSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-24 md:py-36 px-6 md:px-12 bg-background relative overflow-hidden">
+    <section id="about" className="py-14 md:py-20 px-6 md:px-12 bg-background relative overflow-hidden">
       {/* Subtle accent line */}
       <div className="absolute top-0 left-0 w-full h-px bg-border" />
       
@@ -25,7 +25,7 @@ const AboutSection = () => {
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.05] mb-8">
               Built on Passion.
               <br />
-              <span className="text-gradient-brand">Driven by Results.</span>
+              <span className="text-gradient-brand drop-shadow-[0_0_20px_rgba(255,165,0,0.3)]">Driven by Results.</span>
             </h2>
 
             {/* Mission & Vision */}
@@ -61,9 +61,9 @@ const AboutSection = () => {
               we've worked closely with businesses, startups, and institutions to understand one core truth:
             </p>
             
-            <blockquote className="relative py-6 pl-0">
-              <div className="absolute left-0 top-0 font-display text-6xl text-secondary/20 leading-none">"</div>
-              <p className="font-display text-xl md:text-2xl text-foreground italic pl-8">
+            <blockquote className="relative p-8 mt-8 mb-8 glass-card rounded-2xl border-l-4 border-l-secondary overflow-hidden group hover:shadow-blue transition-all duration-500">
+              <div className="absolute left-4 top-2 font-display text-8xl text-secondary/10 leading-none group-hover:scale-110 transition-transform duration-500">"</div>
+              <p className="font-display text-xl md:text-2xl text-foreground italic relative z-10 pl-2">
                 A website is not just a presence — it's your most powerful business tool.
               </p>
             </blockquote>

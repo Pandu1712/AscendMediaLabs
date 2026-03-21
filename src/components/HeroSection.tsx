@@ -26,22 +26,14 @@ const stats = [
 const HeroSection = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-background">
-      {/* Subtle grid pattern */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: "linear-gradient(hsl(var(--foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)",
-        backgroundSize: "60px 60px"
-      }} />
-
-      {/* Gradient orbs */}
-      <div className="absolute top-20 right-0 w-[600px] h-[600px] rounded-full opacity-[0.06]" style={{ background: "radial-gradient(circle, hsl(var(--royal-blue)), transparent 70%)" }} />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full opacity-[0.04]" style={{ background: "radial-gradient(circle, hsl(var(--deep-gold)), transparent 70%)" }} />
+      {/* 3D Scene takes full focus */}
 
       {/* 3D Scene - subtle background */}
       <Suspense fallback={null}>
         <Scene3D />
       </Suspense>
 
-      <div className="container mx-auto relative z-10 px-6 md:px-12 pt-32 pb-20">
+        <div className="container mx-auto relative z-10 px-6 md:px-12 pt-28 pb-12">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -59,13 +51,11 @@ const HeroSection = () => {
           {/* Headline */}
           <motion.h1
             variants={itemVariants}
-            className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tight text-foreground mb-8"
+            className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight text-foreground mb-8 text-shadow-sm"
           >
             We Build
             <br />
-            <span className="text-gradient-brand">Digital Growth</span>
-            <br />
-            Systems.
+            <span className="italic text-gradient-brand drop-shadow-[0_0_25px_rgba(255,165,0,0.3)] whitespace-nowrap">Digital Growth Systems.</span>
           </motion.h1>
 
           {/* Subheading */}
@@ -73,17 +63,17 @@ const HeroSection = () => {
             variants={itemVariants}
             className="font-body text-lg md:text-xl text-muted-foreground max-w-xl mb-12 leading-relaxed"
           >
-            Premium websites, powerful branding, and growth-driven digital 
-            solutions for businesses that want to dominate their market.
+            Your brand deserves more than a website — it deserves a digital empire.
+            We craft experiences that captivate, convert, and command authority.
           </motion.p>
 
           {/* CTAs */}
-          <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mb-20">
-            <a href="#contact" className="group btn-primary text-base inline-flex items-center gap-2">
+          <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mb-10 relative z-20">
+            <a href="#contact" className="group btn-primary glow-blue text-base inline-flex items-center gap-2">
               Start Your Project
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
-            <a href="#projects" className="btn-outline text-base">
+            <a href="#projects" className="btn-outline hover:glow-gold text-base backdrop-blur-sm bg-white/5">
               View Our Work
             </a>
           </motion.div>
@@ -91,7 +81,7 @@ const HeroSection = () => {
           {/* Stats bar */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-wrap gap-x-12 gap-y-6 border-t border-border pt-10"
+            className="flex flex-wrap gap-x-10 gap-y-4 border-t border-border pt-8"
           >
             {stats.map((stat, i) => (
               <div key={i} className="min-w-[120px]">
