@@ -32,9 +32,9 @@ const ContactSection = () => {
 
             <div className="space-y-5">
               {[
-                { icon: Phone, text: "+91 XXXXXXXX", href: "tel:+91XXXXXXXX", label: "Call / WhatsApp" },
-                { icon: Globe, text: "yourdomain.com", href: "#", label: "Website" },
-                { icon: Mail, text: "your@email.com", href: "mailto:your@email.com", label: "Email" },
+                { icon: Phone, text: "+91 7675852618 ", href: "tel:+917675852618", label: "Call / WhatsApp" },
+                { icon: Globe, text: "ascendmedialabs.com", href: "#", label: "Website" },
+                { icon: Mail, text: "reachus@ascendmedialabs.com", href: "mailto:reachus@ascendmedialabs.com", label: "Email" },
               ].map((item, i) => (
                 <motion.a
                   key={i}
@@ -71,7 +71,7 @@ const ContactSection = () => {
             <form className="glass-card rounded-3xl p-8 md:p-10 space-y-5 relative z-10" onSubmit={(e) => e.preventDefault()}>
               <h3 className="font-display text-xl font-bold text-foreground mb-2">Start Your Project</h3>
               <p className="font-body text-sm text-muted-foreground mb-6">Fill in your details and we'll get back within 24 hours.</p>
-              
+
               {["Your Name", "Email Address", "Phone Number"].map((placeholder) => (
                 <input
                   key={placeholder}

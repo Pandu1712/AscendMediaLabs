@@ -20,7 +20,7 @@ const Footer = () => {
             {[
               { icon: Twitter, href: "#" },
               { icon: Linkedin, href: "#" },
-              { icon: Instagram, href: "#" },
+              { icon: Instagram, href: "https://www.instagram.com/ascend_media_labs?igsh=cjRyZDY0OGJwdjZw" },
               { icon: Github, href: "#" },
             ].map((social, i) => (
               <a
@@ -33,21 +33,21 @@ const Footer = () => {
             ))}
           </div>
         </div>
-
+        {/* 
         <div className="flex flex-wrap justify-center md:justify-start gap-6 font-body text-xs text-muted-foreground uppercase tracking-wider mb-8">
           {["React", "TypeScript", "Tailwind CSS", "Fully Responsive"].map((tech) => (
             <span key={tech} className="hover:text-foreground transition-colors cursor-default">
               {tech}
             </span>
           ))}
-        </div>
+        </div> */}
 
         <div className="border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="font-body text-xs text-muted-foreground text-center md:text-left">
             © {new Date().getFullYear()} Ascend Media Labs. All rights reserved.
           </p>
           <p className="font-body text-xs text-muted-foreground italic text-center md:text-right">
-            "We don't build cheap websites. We build websites that make you money."
+            "Your vision deserves a digital presence that commands attention. Let's build your legacy."
           </p>
         </div>
       </div>
