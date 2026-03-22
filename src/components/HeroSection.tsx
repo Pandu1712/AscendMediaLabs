@@ -33,7 +33,11 @@ const HeroSection = () => {
         <Scene3D />
       </Suspense>
 
-        <div className="container mx-auto relative z-10 px-6 md:px-12 pt-24 pb-10 md:py-0">
+      {/* Decorative Blobs */}
+      <div className="bg-blob w-[500px] h-[500px] bg-royal-blue/30 -top-20 -left-20 animate-float" />
+      <div className="bg-blob w-[400px] h-[400px] bg-deep-gold/20 bottom-0 -right-20 animate-float-medium" />
+
+        <div className="container mx-auto relative z-10 px-6 md:px-12 pt-32 sm:pt-40 md:pt-48 pb-10 md:py-0">
         <motion.div
           variants={containerVariants}
           initial="hidden"

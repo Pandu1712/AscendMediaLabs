@@ -52,7 +52,7 @@ const Navbar = () => {
             <img
               src="/logo.png"
               alt="Ascend Media Labs Logo"
-              className="h-16 w-16 md:h-20 md:w-20 object-cover rounded-full shadow-md shadow-secondary/20 border-2 border-white/5"
+              className="h-12 w-12 md:h-16 md:w-16 object-cover rounded-full shadow-md shadow-secondary/20 border-2 border-white/5"
               onError={(e) => { e.currentTarget.style.display = "none"; }}
             />
           </a>

@@ -59,6 +59,10 @@ const ServicesSection = () => {
 
   return (
     <section id="services" className="py-14 md:py-20 px-6 md:px-12 relative overflow-hidden bg-background">
+      {/* Decorative Blobs */}
+      <div className="bg-blob w-[600px] h-[600px] bg-royal-blue/20 -top-40 -right-40 animate-float-medium" />
+      <div className="bg-blob w-[500px] h-[500px] bg-deep-gold/15 bottom-0 -left-20 animate-float" />
+
       {/* Dynamic Background Glows */}
       <div className="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-secondary/10 rounded-full blur-[120px] -translate-y-1/2" />
       <div className="absolute top-1/2 right-1/4 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[120px] -translate-y-1/2" />
